@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dishcovery</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'frontend/style.css' %}">
+</head>
+<body>
+
+<h1>Dishcovery 🍽️</h1>
+
+<input type="file" id="imageInput">
+<button onclick="uploadImage()">Detect Food</button>
+
+<pre id="output"></pre>
+
+<script src="{% static 'frontend/app.js' %}"></script>
+</body>
+</html>

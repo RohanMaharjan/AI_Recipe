@@ -73,10 +73,12 @@ class DetectFoodAPIView(APIView):
 
         # YOLO detection
         detected_items = detect_food(image_path)
+        print("Detected ingredients:", detected_items)
 
         # Recipe recommendation
         recipes = get_recipes(detected_items)
-
+        print("Recipes fetched:", len(recipes))
+        
         return Response({
             "ingredients": detected_items,
             "recipes": recipes
